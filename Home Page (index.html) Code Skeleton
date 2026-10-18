@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Personal Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Cody Villarreal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About / Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section>
+            <h2>Welcome to My Portfolio</h2>
+            <p>I am a web development student building functional and clean web applications.</p>
+        </section>
+
+        <section>
+            <h2>Featured Highlights</h2>
+            <article>
+                <h3>Recent Work</h3>
+                <p>Check out my latest projects and coding milestones.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cody Villarreal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
