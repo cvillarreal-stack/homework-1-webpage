@@ -1,0 +1,22 @@
++-------------------------------------------------------------+
+|                          HEADER                             |
+|  [ Logo / Name ]                                            |
+|  <NAV>: [Home] | [Projects] | [About/Contact]               |
++-------------------------------------------------------------+
+|                          MAIN                               |
+|  <h1> My Projects & Work                                    |
+|                                                             |
+|  <SECTION: Project Grid / List>                             |
+|    <ARTICLE: Project 1>                                     |
+|      - <h2> Project Title 1                                 |
+|      - <h3> Tech Stack / Category                           |
+|      - Description & links                                  |
+|                                                             |
+|    <ARTICLE: Project 2>                                     |
+|      - <h2> Project Title 2                                 |
+|      - <h3> Tech Stack / Category                           |
+|      - Description & links                                  |
++-------------------------------------------------------------+
+|                          FOOTER                             |
+|  - Copyright & Social Links                                 |
++-------------------------------------------------------------+
