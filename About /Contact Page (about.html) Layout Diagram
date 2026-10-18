@@ -1,0 +1,17 @@
++-------------------------------------------------------------+
+|                          HEADER                             |
+|  [ Logo / Name ]                                            |
+|  <NAV>: [Home] | [Projects] | [About/Contact]               |
++-------------------------------------------------------------+
+|                          MAIN                               |
+|  <SECTION: About Me>                                        |
+|    - <h1> About Me                                          |
+|    - Bio, background, and skills                            |
+|                                                             |
+|  <SECTION: Contact Info / Form>                             |
+|    - <h2> Get in Touch                                      |
+|    - <h3> Contact Details / Placeholder form                |
++-------------------------------------------------------------+
+|                          FOOTER                             |
+|  - Copyright & Social Links                                 |
++-------------------------------------------------------------+
