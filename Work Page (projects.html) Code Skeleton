@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Personal Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Cody Villarreal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About / Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Selected Works</h2>
+            
+            <article>
+                <h2>Portfolio Site Skeleton</h2>
+                <h3>HTML & Web Architecture</h3>
+                <p>A multi-page responsive personal site layout designed with semantic HTML5 elements.</p>
+            </article>
+
+            <article>
+                <h2>Upcoming Web App</h2>
+                <h3>JavaScript & APIs</h3>
+                <p>Interactive web application project currently under development.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cody Villarreal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
