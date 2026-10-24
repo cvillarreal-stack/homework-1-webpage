@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Personal Web Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Personal Web Page</title>
+  <!-- Link external CSS file -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <h1>Cody Villarreal</h1>
+    <p>Welcome to my personal webpage!</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-        <h1>Cody Villarreal</h1>
-        <p>Welcome to my personal webpage!</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <main>
+    <section id="about" class="card-section">
+      <h2>About Me</h2>
+      <p>Hello! I am a student taking Web Development and interested in technology and coding.</p>
+      <img class="profile-img" src="https://dummyimage.com/150x150/cccccc/000000.png&text=Profile" alt="Profile picture of Cody Villarreal">
+    </section>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello! I am a student taking Web Development and interested in technology and coding.</p>
-            <img src="https://dummyimage.com/150x150/cccccc/000000.png&text=Profile" alt="Profile picture of Cody Villarreal">
-        </section>
+    <section id="hobbies" class="card-section">
+      <h2>My Favorite Hobbies</h2>
+      <article>
+        <h3>Web Development & Tech</h3>
+        <p>Learning how the web works and building clean HTML structures.</p>
+      </article>
+      <h3>Top 3 Things I Enjoy:</h3>
+      <ol>
+        <li>Coding games on Godot</li>
+        <li>Watching Anime</li>
+        <li>Reading books</li>
+      </ol>
+    </section>
+  </main>
 
-        <section id="hobbies">
-            <h2>My Favorite Hobbies</h2>
-            <article>
-                <h3>Web Development & Tech</h3>
-                <p>Learning how the web works and building clean HTML structures.</p>
-            </article>
-            
-            <h3>Top 3 Things I Enjoy:</h3>
-            <ol>
-                <li>Coding games on godot</li>
-                <li>Watching Anime</li>
-                <li>Reading books</li>
-            </ol>
-        </section>
-    </main>
-
-    <footer>
-        <p id="contact">&copy; 2026 Cody Villarreal. All rights reserved.</p>
-    </footer>
-
+  <footer>
+    <p id="contact">&copy; 2026 Cody Villarreal. All rights reserved.</p>
+  </footer>
 </body>
 </html>
