@@ -1,19 +1,38 @@
-/* 1. TYPE SELECTORS */
+/* 1. GLOBAL & TYPE SELECTORS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
   color: #1a1a2e;
   margin: 0 auto;
   padding: 20px;
-  max-width: 800px;
+  max-width: 1200px; /* Expanded max-width for desktop viewports */
 }
 
+/* Flexbox Navigation Header */
 header {
   background-color: #1a1a2e;
   color: #ffffff;
   padding: 20px;
-  border-radius: 8px 8px 0 0; /* Rounds top corners, keeps bottom edge straight for the wave */
-  margin-bottom: 0;           /* Removes gap between header and wave */
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
 }
 
 header a {
@@ -27,14 +46,21 @@ header a {
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  margin-bottom: 25px;       /* Adds space above the main content cards */
+  margin-bottom: 25px;
 }
 
 .wave-container svg {
   position: relative;
   display: block;
   width: 100%;
-  height: 50px;              /* Adjust height to make the wave taller or flatter */
+  height: 50px;
+}
+
+/* CSS Grid for Main Layout Section */
+main {
+  display: grid;
+  grid-template-columns: 1fr; /* Default 1-column layout for mobile */
+  gap: 20px;
 }
 
 /* 2. CLASS SELECTORS */
@@ -42,15 +68,24 @@ header a {
   background-color: #ffffff;
   border: 2px solid #0f3460;
   padding: 20px;
-  margin-bottom: 20px;
   border-radius: 8px;
+}
+
+/* Flexbox layout inside the About card */
+.about-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
 }
 
 .profile-img {
   border: 3px solid #e94560;
   padding: 5px;
-  margin-top: 10px;
   border-radius: 50%;
+  max-width: 150px;
+  height: auto;
 }
 
 /* 3. ID SELECTORS */
@@ -61,4 +96,33 @@ header a {
   margin-top: 30px;
   border-top: 4px solid #e94560;
   text-align: center;
+  border-radius: 0 0 8px 8px;
+}
+
+/* 4. MEDIA QUERIES FOR RESPONSIVE BREAKPOINTS */
+
+/* Tablet Viewport (768px+) */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .about-flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Desktop Viewport (1200px+) */
+@media (min-width: 1200px) {
+  main {
+    grid-template-columns: 1fr 1fr; /* Multi-column Grid layout */
+  }
 }
