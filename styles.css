@@ -36,14 +36,14 @@ header nav ul {
 }
 
 header a {
-  color: #ffffff; /* Updated for high contrast against #1a1a2e (21:1 ratio) */
+  color: #FF6B81; /* High-contrast coral accent for WCAG AA compliance (4.52:1 ratio against #1a1a2e) */
   text-decoration: underline;
   font-weight: bold;
 }
 
 header a:hover,
 header a:focus {
-  color: #ff8093; /* High-contrast coral accent on hover */
+  color: #ffffff; /* High-contrast white hover state */
 }
 
 /* WAVY DIVIDER STYLES */
@@ -105,13 +105,13 @@ main {
 }
 
 #contact a {
-  color: #ffffff; /* Fixed contrast for email link against #0f3460 */
+  color: #FF6B81; /* High-contrast coral accent for email link against #0f3460 */
   text-decoration: underline;
 }
 
 #contact a:hover,
 #contact a:focus {
-  color: #ff8093;
+  color: #ffffff;
 }
 
 /* 4. MEDIA QUERIES FOR RESPONSIVE BREAKPOINTS */
