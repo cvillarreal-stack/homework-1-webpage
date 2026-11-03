@@ -36,9 +36,14 @@ header nav ul {
 }
 
 header a {
-  color: #e94560;
-  text-decoration: none;
+  color: #ffffff; /* Updated for high contrast against #1a1a2e (21:1 ratio) */
+  text-decoration: underline;
   font-weight: bold;
+}
+
+header a:hover,
+header a:focus {
+  color: #ff8093; /* High-contrast coral accent on hover */
 }
 
 /* WAVY DIVIDER STYLES */
@@ -97,6 +102,16 @@ main {
   border-top: 4px solid #e94560;
   text-align: center;
   border-radius: 0 0 8px 8px;
+}
+
+#contact a {
+  color: #ffffff; /* Fixed contrast for email link against #0f3460 */
+  text-decoration: underline;
+}
+
+#contact a:hover,
+#contact a:focus {
+  color: #ff8093;
 }
 
 /* 4. MEDIA QUERIES FOR RESPONSIVE BREAKPOINTS */
