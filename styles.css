@@ -11,10 +11,11 @@ body {
   color: #1a1a2e;
   margin: 0 auto;
   padding: 20px;
-  max-width: 1200px; /* Expanded max-width for desktop viewports */
+  max-width: 1200px;
+  line-height: 1.6;
 }
 
-/* Flexbox Navigation Header */
+/* Flexbox Navigation Header (Gestalt: Similarity across all 3 pages) */
 header {
   background-color: #1a1a2e;
   color: #ffffff;
@@ -36,14 +37,18 @@ header nav ul {
 }
 
 header a {
-  color: #FF6B81; /* High-contrast coral accent for WCAG AA compliance (4.52:1 ratio against #1a1a2e) */
+  color: #FF6B81; /* 5.8:1 contrast against #1a1a2e (Passes WCAG AA) */
   text-decoration: underline;
   font-weight: bold;
 }
 
 header a:hover,
-header a:focus {
-  color: #ffffff; /* High-contrast white hover state */
+header a:focus,
+header a[aria-current="page"] {
+  color: #ffffff;
+  outline: 2px solid #FF6B81;
+  outline-offset: 3px;
+  border-radius: 3px;
 }
 
 /* WAVY DIVIDER STYLES */
@@ -64,16 +69,31 @@ header a:focus {
 /* CSS Grid for Main Layout Section */
 main {
   display: grid;
-  grid-template-columns: 1fr; /* Default 1-column layout for mobile */
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
-/* 2. CLASS SELECTORS */
+/* 2. CLASS SELECTORS (Gestalt: Figure-Ground & Proximity) */
 .card-section {
   background-color: #ffffff;
   border: 2px solid #0f3460;
   padding: 20px;
   border-radius: 8px;
+}
+
+.card-section h2 {
+  color: #0f3460;
+  margin-bottom: 12px;
+}
+
+.card-section article {
+  margin-top: 12px;
+}
+
+.card-section ol,
+.card-section ul {
+  padding-left: 22px;
+  margin-top: 6px;
 }
 
 /* Flexbox layout inside the About card */
@@ -93,7 +113,111 @@ main {
   height: auto;
 }
 
-/* 3. ID SELECTORS */
+/* Gestalt: Proximity & Similarity for Project Cards */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.project-card {
+  background-color: #f8f9fa;
+  border: 1.5px solid #0f3460;
+  border-left: 5px solid #e94560;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.project-card h3 {
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+/* 3. ACCESSIBLE FORM STYLES */
+fieldset {
+  border: 2px solid #0f3460;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 16px;
+}
+
+legend {
+  font-weight: bold;
+  color: #0f3460;
+  padding: 0 6px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+label {
+  font-weight: bold;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1.5px solid #0f3460;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #1a1a2e;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #0f3460;
+  outline-offset: 2px;
+}
+
+/* Accessible Error State: High-contrast border + background + text (not color alone) */
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border: 2.5px solid #c81e3b;
+  background-color: #fff5f6;
+}
+
+.error-message {
+  color: #c81e3b; /* 5.4:1 contrast on #ffffff (Passes WCAG AA) */
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.success-message {
+  color: #0f3460;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn-submit {
+  background-color: #0f3460;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+  background-color: #1a1a2e;
+  outline: 3px solid #e94560;
+  outline-offset: 2px;
+}
+
+/* 4. ID SELECTORS (Footer) */
 #contact {
   background-color: #0f3460;
   color: #ffffff;
@@ -105,7 +229,7 @@ main {
 }
 
 #contact a {
-  color: #FF6B81; /* High-contrast coral accent for email link against #0f3460 */
+  color: #FF8598; /* 5.3:1 contrast against #0f3460 (Passes WCAG AA) */
   text-decoration: underline;
 }
 
@@ -114,9 +238,7 @@ main {
   color: #ffffff;
 }
 
-/* 4. MEDIA QUERIES FOR RESPONSIVE BREAKPOINTS */
-
-/* Tablet Viewport (768px+) */
+/* 5. MEDIA QUERIES FOR RESPONSIVE BREAKPOINTS */
 @media (min-width: 768px) {
   header {
     flex-direction: row;
@@ -135,9 +257,8 @@ main {
   }
 }
 
-/* Desktop Viewport (1200px+) */
 @media (min-width: 1200px) {
   main {
-    grid-template-columns: 1fr 1fr; /* Multi-column Grid layout */
+    grid-template-columns: 1fr 1fr;
   }
 }
