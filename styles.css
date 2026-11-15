@@ -6,13 +6,17 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   background-color: #f8f9fa;
   color: #1a1a2e;
   margin: 0 auto;
   padding: 20px;
   max-width: 1200px;
   line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Flexbox Navigation Header (Gestalt: Similarity across all 3 pages) */
@@ -202,63 +206,4 @@ textarea[aria-invalid="true"] {
 .btn-submit {
   background-color: #0f3460;
   color: #ffffff;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.btn-submit:hover,
-.btn-submit:focus {
-  background-color: #1a1a2e;
-  outline: 3px solid #e94560;
-  outline-offset: 2px;
-}
-
-/* 4. ID SELECTORS (Footer) */
-#contact {
-  background-color: #0f3460;
-  color: #ffffff;
-  padding: 15px;
-  margin-top: 30px;
-  border-top: 4px solid #e94560;
-  text-align: center;
-  border-radius: 0 0 8px 8px;
-}
-
-#contact a {
-  color: #FF8598; /* 5.3:1 contrast against #0f3460 (Passes WCAG AA) */
-  text-decoration: underline;
-}
-
-#contact a:hover,
-#contact a:focus {
-  color: #ffffff;
-}
-
-/* 5. MEDIA QUERIES FOR RESPONSIVE BREAKPOINTS */
-@media (min-width: 768px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
-
-  header nav ul {
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .about-flex {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-@media (min-width: 1200px) {
-  main {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+  padding
